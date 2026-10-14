@@ -38,6 +38,11 @@ export default function App() {
     return () => unsub();
   }, []);
 
+  // A permissão pode depender da URL (#/admin no modo local): reavalia ao trocar de rota.
+  useEffect(() => {
+    store?.canEdit().then(setCanEdit);
+  }, [store, route]);
+
   const ready = route === 'site' && store && projects !== null;
   useLayoutEffect(() => {
     if (!ready) return;

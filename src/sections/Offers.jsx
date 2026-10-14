@@ -53,13 +53,6 @@ export function Plans({ onInterest }) {
           </li>
         ))}
       </ol>
-      <p className="offers__note" data-reveal>
-        Cada botão leva ao agendamento de uma conversa de 30 min, sem custo. Ainda em dúvida?{' '}
-        <a href="#agendar" onClick={() => onInterest?.('Ainda não sei', '')}>
-          Agende e eu indico o plano certo
-        </a>
-        . Precisa de um projeto pontual? <a href="#pacotes">Veja os pacotes</a>.
-      </p>
     </section>
   );
 }
@@ -88,7 +81,6 @@ export function Packages({ onInterest }) {
               <span className="pkg__from">A partir de</span>
               <span className="pkg__amount">{k.price}</span>
             </p>
-            <p className="pkg__summary">{k.summary}</p>
             <dl className="pkg__spec">
               <div>
                 <dt>Gravação</dt>

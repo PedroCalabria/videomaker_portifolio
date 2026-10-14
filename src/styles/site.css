@@ -371,7 +371,6 @@ button { font: inherit; color: inherit; }
 .pkg .xh { color: var(--on-inverse-2); }
 .pkg__top { display: flex; justify-content: space-between; color: var(--text-2); }
 .pkg__name { margin: var(--space-3) 0 0; font-family: var(--font-display); font-weight: 500; font-size: var(--fs-h2); line-height: 1.05; letter-spacing: -.015em; text-transform: uppercase; }
-.pkg__summary { margin: 0; font-size: 15px; line-height: 1.5; color: var(--text-2); }
 .pkg__list { margin: var(--space-1) 0 var(--space-3); padding: 0; list-style: none; display: grid; gap: 10px; }
 .pkg__list li { display: flex; gap: 10px; font-size: 15px; line-height: 1.4; }
 .pkg__list li span { font-family: var(--font-mono); color: var(--text-muted); }
@@ -522,8 +521,6 @@ button { font: inherit; color: inherit; }
 .plan__amount, .pkg__amount { font-family: var(--font-mono); font-weight: 400; font-size: clamp(36px, 3.6vw, 52px); line-height: 1; letter-spacing: -.04em; }
 .plan__price span:first-child { font-family: var(--font-mono); font-weight: 400; font-size: clamp(36px, 3.6vw, 52px); letter-spacing: -.04em; }
 .plan__pitch { min-height: 0; }
-.offers__note { margin: var(--space-3) 0 0; font-size: 15px; color: var(--text-2); }
-.offers__note a { color: var(--text); text-underline-offset: 4px; }
 .plans__note { display: none; }
 .pkgs { gap: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .pkg { border: 0; padding: var(--space-4) var(--space-4) var(--space-4) 0; }
@@ -550,8 +547,8 @@ button { font: inherit; color: inherit; }
   .sec-meta > div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
   .sec-meta > div { grid-template-columns: 96px 1fr; align-items: baseline; }
 }
-.pkg__summary, .plan__pitch { min-height: 3em; }
-@media (max-width: 1023px) { .pkg__summary, .plan__pitch { min-height: 0; } }
+.plan__pitch { min-height: 3em; }
+@media (max-width: 1023px) { .plan__pitch { min-height: 0; } }
 
 .offer__for { margin: 0; display: grid; gap: 4px; font-size: 15px; line-height: 1.4; color: var(--text); }
 .offer__for span { font-family: var(--font-mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--text-2); }
@@ -606,6 +603,7 @@ button { font: inherit; color: inherit; }
 .faq__ask .cc-btn--outline:hover { color: var(--inverse); }
 .faq__q { display: grid; gap: 4px; }
 .faq__short { font-family: var(--font-body); font-size: 15px; line-height: 1.4; letter-spacing: 0; color: var(--text-2); }
+.faq__item.is-open .faq__short { display: none; }
 .final__ok-name { color: var(--text-2); }
 .final__ok-tag { color: var(--success) !important; }
 .form__errsum { margin: 0; font-family: var(--font-mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--danger); }
