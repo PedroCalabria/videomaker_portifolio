@@ -98,7 +98,7 @@ Todo o site fala só com o store (`src/lib/store.js`), que escolhe sozinho:
 | onde roda | store | dados |
 |---|---|---|
 | artifact do Claude | `artifact` | banco e arquivos do artifact |
-| Vercel com `VITE_SUPABASE_*` | `supabase` | Supabase + Bunny |
+| Vercel com `NEXT_PUBLIC_SUPABASE_*` | `supabase` | Supabase + Bunny |
 | sem configuração | `local` | demonstração + localStorage |
 
 Cada formato de vídeo de um projeto guarda **um** destes: `bunnyId` (Bunny Stream), `videoUrl` (link) ou `videoAsset` (arquivo do artifact).

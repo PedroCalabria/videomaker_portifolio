@@ -1,5 +1,5 @@
 """Ponta a ponta do modo produção (Supabase + rotas /api + Bunny) com tudo simulado no navegador.
-uso: python3 scripts/test_e2e_supabase.py <index.html construído com VITE_SUPABASE_URL=https://sb.test VITE_API_BASE=https://api.test/api> <video.webm>
+uso: python3 scripts/test_e2e_supabase.py <index.html construído com NEXT_PUBLIC_SUPABASE_URL=https://sb.test VITE_API_BASE=https://api.test/api> <video.webm>
 """
 import json, sys, pathlib, re
 from urllib.parse import urlparse, parse_qs, unquote

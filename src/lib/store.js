@@ -6,7 +6,7 @@
 //   canEdit() -> Promise<boolean>
 //
 // Dentro do Claude (artifact) usa o banco e o armazenamento de arquivos do artifact.
-// Publicado na Vercel com as variáveis VITE_SUPABASE_* usa Supabase + Bunny (store-supabase.js).
+// Publicado na Vercel com as variáveis NEXT_PUBLIC_SUPABASE_* usa Supabase + Bunny (store-supabase.js).
 // Sem nada configurado (dev local) usa o conteúdo de demonstração + localStorage.
 
 import { SEED_PROJECTS } from '../data/seed.js';
@@ -139,9 +139,9 @@ export async function createStore() {
     const s = await createArtifactStore(window.claude);
     if (s) return s;
   }
-  if (ENV.VITE_SUPABASE_URL && ENV.VITE_SUPABASE_ANON_KEY) {
+  if (ENV.NEXT_PUBLIC_SUPABASE_URL && ENV.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
     const { createSupabaseStore } = await import('./store-supabase.js');
-    return createSupabaseStore({ url: ENV.VITE_SUPABASE_URL, anonKey: ENV.VITE_SUPABASE_ANON_KEY, apiBase: ENV.VITE_API_BASE || '/api' });
+    return createSupabaseStore({ url: ENV.NEXT_PUBLIC_SUPABASE_URL, anonKey: ENV.NEXT_PUBLIC_SUPABASE_ANON_KEY, apiBase: ENV.VITE_API_BASE || '/api' });
   }
   return createLocalStore();
 }
